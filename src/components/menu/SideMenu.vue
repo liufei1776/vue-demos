@@ -10,7 +10,17 @@ import MenuItem from './MenuItem.vue';
 import routes from '@/router/routes';
 import { filterRoutesByPermissions } from '@/utils/routes';
 
-const permissions = ['home', 'system-permission', 'wheel', 'upload-demo', 'wang-editor', 'bpmn'];
+const permissions = [
+  'home',
+  'system-permission',
+  /*'wheel', */
+  'upload-demo',
+  /*'wang-editor',*/
+  /* 'bpmn', */
+  /*'logic-flow', */
+  'relation-graph',
+  'virtual-list',
+];
 const availableRoutes = filterRoutesByPermissions(routes, permissions);
 </script>
 

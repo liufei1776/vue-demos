@@ -70,6 +70,30 @@ const routes: RouteRecordRaw[] = [
       title: 'BPMN',
     },
   },
+  {
+    path: '/logic-flow',
+    name: 'logic-flow',
+    component: () => import('@/views/logic-flow/PageIndex.vue'),
+    meta: {
+      title: 'LogicFlow',
+    },
+  },
+  {
+    path: '/relation-graph',
+    name: 'relation-graph',
+    component: () => import('@/views/relation-graph/PageIndex.vue'),
+    meta: {
+      title: 'Relation Graph Vue3',
+    },
+  },
+  {
+    path: '/virtual-list',
+    name: 'virtual-list',
+    component: () => import('@/views/virtual-list/PageIndex.vue'),
+    meta: {
+      title: '虚拟列表',
+    },
+  },
 ];
 
 export default routes;
