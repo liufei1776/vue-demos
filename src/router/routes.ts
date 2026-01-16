@@ -94,6 +94,14 @@ const routes: RouteRecordRaw[] = [
       title: '虚拟列表',
     },
   },
+  {
+    path: '/sheetjs',
+    name: 'sheetjs',
+    component: () => import('@/views/sheetjs/PageIndex.vue'),
+    meta: {
+      title: 'SheetJS',
+    },
+  },
 ];
 
 export default routes;

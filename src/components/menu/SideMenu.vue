@@ -20,6 +20,7 @@ const permissions = [
   /*'logic-flow', */
   'relation-graph',
   'virtual-list',
+  'sheetjs',
 ];
 const availableRoutes = filterRoutesByPermissions(routes, permissions);
 </script>
