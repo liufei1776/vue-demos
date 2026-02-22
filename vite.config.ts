@@ -1,3 +1,5 @@
+/// <reference types="vitest/config" />
+
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -20,5 +22,8 @@ export default defineConfig({
   build: {
     target: 'esnext',
     outDir: 'dist',
+  },
+  test: {
+    environment: 'jsdom',
   },
 });
