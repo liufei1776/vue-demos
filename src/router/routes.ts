@@ -102,6 +102,20 @@ const routes: RouteRecordRaw[] = [
       title: 'SheetJS',
     },
   },
+  {
+    path: '/form-create',
+    name: 'form-create',
+    component: () => import('@/views/form-create/PageIndex.vue'),
+    meta: {
+      title: 'form-create',
+    },
+  },
+  {
+    path: '/ai',
+    name: 'ai',
+    component: () => import('@/views/ai/PageIndex.vue'),
+    meta: { title: 'ai' },
+  },
 ];
 
 export default routes;

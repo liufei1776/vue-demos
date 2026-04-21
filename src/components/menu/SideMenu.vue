@@ -5,28 +5,30 @@
 </template>
 
 <script setup lang="ts">
-import { ElMenu } from 'element-plus';
-import MenuItem from './MenuItem.vue';
-import routes from '@/router/routes';
-import { filterRoutesByPermissions } from '@/utils/routes';
+  import { ElMenu } from 'element-plus';
+  import MenuItem from './MenuItem.vue';
+  import routes from '@/router/routes';
+  import { filterRoutesByPermissions } from '@/utils/routes';
 
-const permissions = [
-  'home',
-  'system-permission',
-  /*'wheel', */
-  'upload-demo',
-  /*'wang-editor',*/
-  /* 'bpmn', */
-  /*'logic-flow', */
-  'relation-graph',
-  'virtual-list',
-  'sheetjs',
-];
-const availableRoutes = filterRoutesByPermissions(routes, permissions);
+  const permissions = [
+    'home',
+    'system-permission',
+    //wheel',
+    'upload-demo',
+    // 'wang-editor',
+    // 'bpmn',
+    /*'logic-flow', */
+    // 'relation-graph',
+    // 'virtual-list',
+    // 'sheetjs',
+    // 'form-create',
+    'ai',
+  ];
+  const availableRoutes = filterRoutesByPermissions(routes, permissions);
 </script>
 
 <style>
-/* .el-menu {
+  /* .el-menu {
   border-right: none;
 } */
 </style>

@@ -15,8 +15,15 @@ export default defineConfig({
   },
   server: {
     port: 7011,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
+    // headers: {
+    //   'Access-Control-Allow-Origin': '*',
+    // },
+    proxy: {
+      '/ai': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ai/, ''),
+      },
     },
   },
   build: {
