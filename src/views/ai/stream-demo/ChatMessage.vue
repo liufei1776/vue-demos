@@ -1,12 +1,12 @@
 <template>
-  <div class="chat-message" :class="{ user: role === 'user', bot: role === 'bot' }">
+  <div class="chat-message" :class="{ user: role === 'user', bot: role === 'assistant' }">
     <div class="chat-message__content">{{ content }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
   defineProps<{
-    role: 'user' | 'bot';
+    role: 'user' | 'assistant';
     content: string;
   }>();
 </script>

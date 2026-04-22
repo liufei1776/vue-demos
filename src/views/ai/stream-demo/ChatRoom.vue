@@ -2,7 +2,7 @@
   <div class="ai-chat-container">
     <div class="message-box" ref="message-box">
       <ChatMessage v-for="(msg, index) in messages" :key="index" :role="msg.role" :content="msg.content" />
-      <ChatMessage role="bot" content="思考中..." v-if="loading" />
+      <ChatMessage role="assistant" content="思考中..." v-if="loading" />
     </div>
 
     <form class="chat-ask" @submit.prevent="handleSubmit">
@@ -17,7 +17,7 @@
   import ChatMessage from './ChatMessage.vue';
 
   interface Message {
-    role: 'user' | 'bot';
+    role: 'user' | 'assistant';
     content: string;
   }
 
@@ -60,7 +60,7 @@
       return;
     }
 
-    const botMessage = reactive<Message>({ role: 'bot', content: '' });
+    const botMessage = reactive<Message>({ role: 'assistant', content: '' });
     messages.value.push(botMessage);
 
     const decoder = new TextDecoder('utf-8');

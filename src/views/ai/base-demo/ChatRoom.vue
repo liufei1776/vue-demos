@@ -2,7 +2,7 @@
   <div class="ai-chat-container">
     <div class="message-box" ref="message-box">
       <ChatMessage v-for="(msg, index) in messages" :key="index" :role="msg.role" :content="msg.content" />
-      <ChatMessage role="bot" content="思考中..." v-if="loading" />
+      <ChatMessage role="assistant" content="思考中..." v-if="loading" />
     </div>
 
     <form class="chat-ask" @submit.prevent="handleSubmit">
@@ -17,7 +17,7 @@
   import ChatMessage from './ChatMessage.vue';
 
   interface Message {
-    role: 'user' | 'bot';
+    role: 'user' | 'assistant';
     content: string;
   }
 
@@ -56,7 +56,7 @@
     const data = await response.json();
 
     // 将模型回复内容也放入messages中
-    messages.value.push({ role: 'bot', content: data.answer });
+    messages.value.push({ role: 'assistant', content: data.answer });
 
     loading.value = false;
 

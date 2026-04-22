@@ -1,12 +1,12 @@
 <template>
-  <div class="chat-message" :class="{ user: role === 'user', bot: role === 'bot' }">
+  <div class="chat-message" :class="{ user: role === 'user', assistant: role === 'assistant' }">
     <div class="chat-message__content">{{ content }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
   defineProps<{
-    role: 'user' | 'bot';
+    role: 'user' | 'assistant';
     content: string;
   }>();
 </script>
@@ -36,7 +36,7 @@
     font-size: 14px;
   }
 
-  .chat-message.bot .chat-message__content {
+  .chat-message.assistant .chat-message__content {
     background-color: rgb(240, 249, 235);
   }
 </style>
